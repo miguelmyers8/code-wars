@@ -49,3 +49,16 @@ end
 def basic_op(operator, value1, value2)
 value1.send operator, value2
 end
+
+
+################
+# Given a string of numbers, you should replace any number 
+# below 5 with '0' and any number 5 and above with '1'.
+# Return the resulting string.
+
+def fake_bin(s)
+s = s.split("")
+s = s.map {|x| x.to_i }
+s.collect! {|e| (e<5) ? 0 : e || (e>5) ? 1 : e}
+s.join
+end

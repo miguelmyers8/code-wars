@@ -52,7 +52,7 @@ end
 
 
 ################
-# Given a string of numbers, you should replace any number 
+# Given a string of numbers, you should replace any number
 # below 5 with '0' and any number 5 and above with '1'.
 # Return the resulting string.
 
@@ -61,4 +61,14 @@ s = s.split("")
 s = s.map {|x| x.to_i }
 s.collect! {|e| (e<5) ? 0 : e || (e>5) ? 1 : e}
 s.join
+end
+
+##########################
+# I love you, a little , a lot, passionately ... not at all
+# Your goal in this kata is to determine which phrase
+# the girls would say for a flower of a given
+# number of petals, where nb_petals > 0.
+def how_much_i_love_you(n)
+f = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]*n
+f[n-n+n-1]
 end

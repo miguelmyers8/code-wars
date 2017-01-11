@@ -72,3 +72,36 @@ def how_much_i_love_you(n)
 f = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]*n
 f[n-n+n-1]
 end
+
+
+
+#########################
+#Input: If you can read
+
+#Output: Indian Foxtrot Yankee Oscar Uniform Charlie
+#Alfa November Romeo Echo Alfa Delta
+def to_nato(words)
+n = words.downcase
+n = n.split("")
+hash = { "a"=>"Alfa","b"=>"Bravo","c"=>"Charlie","d"=>"Delta","e"=>"Echo", "f"=>"Foxtrot", "g"=>"Golf", "h"=>"Hotel", "i"=>"India", "j"=>"Juliett", "k"=>"Kilo","l"=>"Lima", "m"=>"Mike", "n"=>"November", "o"=>"Oscar", "p"=>"Papa", "q"=>"Quebec", "r"=>"Romeo", "s"=>"Sierra", "t"=>"Tango", "u"=>"Uniform", "v"=>"Victor", "w" =>"Whiskey", "x"=>"Xray", "y"=>"Yankee", "z"=>"Zulu", "!" => "!", "?" => "?", "." => "."}
+n = n -[" ", nil]
+n = n.map {|x| p hash[x] }
+n.join(" ")
+#hash[n]
+end
+
+
+##########################
+# Write a function that takes an (unsigned) integer as input,
+# and returns the number of bits that are equal
+# to one in the binary representation of that number.
+#
+# Example: The binary representation of 1234
+# is 10011010010, so the function should
+# return 5 in this case
+def count_bits(n)
+n = n.to_s(2)
+n = n.split("")
+n = n.map{|x| x.to_i}
+n.inject(:+)
+end

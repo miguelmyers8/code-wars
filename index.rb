@@ -69,7 +69,12 @@ end
 # the girls would say for a flower of a given
 # number of petals, where nb_petals > 0.
 def how_much_i_love_you(n)
-f = ["I love you", "a little", "a lot", "passionately", "madly", "not at all"]*n
+f = ["I love you",
+  "a little",
+  "a lot",
+  "passionately",
+  "madly",
+  "not at all"]*n
 f[n-n+n-1]
 end
 

@@ -110,3 +110,23 @@ n = n.split("")
 n = n.map{|x| x.to_i}
 n.inject(:+)
 end
+
+#############################
+#convert array of numbers to binary
+def binary_array_to_number(arr)
+  arr.join("").to_i(2)
+end
+
+###############################
+# Remove a exclamation mark from 
+# the end of string. For a beginner kata, you can assume
+# that the input data is always a string, no need to verify it.
+def remove(s)
+p x = s.split("")
+if x.last === "!"
+z  = x.pop
+p x.join("")
+elsif x.last != "!"
+p x.join("")
+end
+end

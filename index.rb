@@ -1,4 +1,4 @@
-
+#
 # that takes as a parameter an array of numbers
 # represented as strings and outputs an array of numbers.
 
@@ -118,7 +118,7 @@ def binary_array_to_number(arr)
 end
 
 ###############################
-# Remove a exclamation mark from 
+# Remove a exclamation mark from
 # the end of string. For a beginner kata, you can assume
 # that the input data is always a string, no need to verify it.
 def remove(s)
@@ -129,4 +129,21 @@ p x.join("")
 elsif x.last != "!"
 p x.join("")
 end
+end
+
+# Write a function to greet a person.
+# Function will take name as input and greet the person
+# by saying hello.
+# Return null/nil if input is empty string or null/nil.
+
+def greet(name)
+
+if name == ""
+  p nil
+elsif name == nil
+  p nil
+else
+  "hello #{name}!"
+end
+
 end

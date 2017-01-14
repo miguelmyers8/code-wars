@@ -1,3 +1,46 @@
+#[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
+#Return an array,
+# where the first element is the count
+# of positives numbers and the second
+# element is sum of negative numbers.
+
+
+def count_positives_sum_negatives(lst)
+
+arr = [ ]
+p b = lst.select(&:positive?).count
+p c = lst.select(&:negative?).inject(:+).to_i
+arr.push(b,c)
+end
+
+
+#this is undone
+# You will be given an array which will include
+# both integers and characters.
+# Return an array of length 2 with a[0] representing the mean
+# of the ten integers as a floating point number.
+# There will always be 10 integers and 10 characters.
+# Create a single string with the characters and
+# return it as a[1] while maintaining the original order.
+
+def mean(lst)
+lst
+p b = lst.clone
+lst.keep_if { |v| v =~ /[0,1,2,3,4,5,6,7,8,9,0 ]/ }
+b.keep_if { |v| v =~ /[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]/ }
+p ar = [ ]
+p  k = lst.map(&:to_i).reduce(0, :+)
+p k = k / lst.size.to_f
+p b
+p arr = ar<< b.join("")
+p arr = ar<< k
+p arr.reverse
+# this kicked my ass
+end
+
+
+
+
 #
 # that takes as a parameter an array of numbers
 # represented as strings and outputs an array of numbers.

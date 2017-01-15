@@ -1,3 +1,90 @@
+# You will be given a string (x) featuring a cat 'C'
+# and a mouse 'm'. The rest of the string will be made up of '.'.
+# You need to find out if the cat can catch the mouse
+# from it's current position. The cat can jump three characters. So:
+# C.....m returns 'Escaped!' <-- more than three characters between
+# C...m returns 'Caught!' <-- as there are three characters between
+# the two, the cat can jump.
+def cat_mouse(x)
+ p x = x.split("")
+ p f = x.shift
+   l = x.pop
+if x.length > 3
+  p "Escaped!"
+else
+  p "Caught!"
+ end
+end
+###########################
+###########################
+
+
+
+# Given an array (x)
+# you need to calculate the Paul Misery Score.
+# The values are worth the following points:
+
+# kata = 5
+# Petes kata = 10
+# life = 0
+# eating = 1
+
+# The Misery Score is the total points gained from the array.
+# Once you have the total,
+# return as follows:
+
+# <40 = 'Super happy!'
+# <70 >=40 = 'Happy!'
+# <100 >=70 = 'Sad!'
+# >=100 = 'Miserable!'
+
+
+def paul(x)
+arr = [ ]
+x.collect do |x|
+  if x== "kata"
+      arr.push(5)
+  elsif x == "Petes kata"
+      arr = arr.push(10)
+  elsif x == "life"
+     arr =  arr.push(0)
+  else
+      p arr = arr.push(1)
+  end
+end
+p f = (arr.inject(:+))
+  if f < 40
+   p "Super happy!"
+  elsif f < 70 && f >= 40
+  p "Happy!"
+  elsif f < 100 && f >= 70
+  p "Sad!"
+  elsif f >= 100
+  p "Miserable!"
+end
+
+ end
+#########################
+#########################
+
+
+
+# An isogram is a word that has no repeating letters,
+# consecutive or non-consecutive.
+# Implement a function that determines
+#  whether a string that contains only letters is an isogram.
+# Assume the empty string is an isogram. Ignore letter case.
+
+
+def is_isogram(s)
+arr = [ ]
+b = "a".."z"
+b.map do |x| p arr << s.downcase.split("").count(x)
+end
+arr.include?(2) || arr.include?(3) ? false : true
+end
+
+
 #[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]
 #Return an array,
 # where the first element is the count
